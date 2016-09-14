@@ -1,34 +1,25 @@
-import webpack from 'webpack';
-import path from 'path';
+const path = require('path');
 const nodeModulesPath = path.resolve(__dirname, 'node_modules');
 const buildPath = path.resolve(__dirname, 'dist');
-const mainPath = path.resolve(__dirname, 'src', 'client.js');
 
-const config = {
-    devtool: 'eval',
-    entry: [
-        'webpack/hot/dev-server',
-        'webpack-dev-server/client?http://localhost:8080',
-        mainPath
-    ],
+module.exports = {
+    entry: './main.js',
     output: {
         path: buildPath,
-        filename: 'bundle.js',
-        publicPath: '/dist/'
+        publicPath: '/assets/',
+        filename: 'bundle.js'
     },
     module: {
         loaders: [
             {
-                test: /\.js?$/,
+                test: /\js?$/,
                 exclude: [nodeModulesPath],
-                loader: 'babel-loader',
+                loader: 'babel',
                 query: {
-                    presets: ['es2015', 'stage-0']
+                    presets: ['react', 'es2015', 'react-hmre']
                 }
             }
-        ]
-    },
-    plugins: [new webpack.HotModuleReplacementPlugin()]
-};
 
-export default config;
+        ]
+    }
+}
