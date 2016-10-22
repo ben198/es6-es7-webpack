@@ -1,6 +1,4 @@
-# es6-es7-webpack
-
-A React project skeleton based largely on [this excellent tutorial](http://www.christianalfoni.com/articles/2015_04_19_The-ultimate-webpack-setup)
+A React project boilerplate
 
 ## Instructions
 - Make sure you have the latest version of Node installed
