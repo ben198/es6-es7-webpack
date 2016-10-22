@@ -6,5 +6,5 @@ import './components/styles.scss';
 
 render(
     <Foo/>,
-    document.getElementById('container')
+    document.getElementById('appRoot')
 );
