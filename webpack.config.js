@@ -3,7 +3,7 @@ const nodeModulesPath = path.resolve(__dirname, 'node_modules');
 const buildPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
-    entry: './main.js',
+    entry: './src/main.js',
     output: {
         path: buildPath,
         publicPath: '/assets/',
